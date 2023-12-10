@@ -51,5 +51,15 @@ function createCard(cardObject) {
   }
 
   document.querySelector(".suit").innerText = suitString;
+  document.querySelector(".rotated").innerText = suitString;
+
+  if (cardObject.suit === "clubs" || cardObject.suit === "spades") {
+    document.querySelector(".suit").classList.add("black");
+    document.querySelector(".rotated").classList.add("black");
+  } else {
+    document.querySelector(".suit").classList.remove("black");
+    document.querySelector(".rotated").classList.remove("black");
+  }
+
   document.querySelector(".value").innerText = valueString;
 }
