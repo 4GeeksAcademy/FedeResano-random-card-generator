@@ -26,7 +26,10 @@
 					"*.md": "vscode.markdown.preview.editor"
 				}
 			},
-			"extensions": [ "esbenp.prettier-vscode" ]
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint"
+			]
 		}
 	}
 

@@ -1,8 +1,8 @@
 import "bootstrap";
 import "./style.css";
 
-window.onload = function () {
-  pickACard();
+window.onload = function() {
+  createCard(pickACard());
   document.querySelector("#button").addEventListener("click", () => {
     createCard(pickACard());
   });
@@ -12,12 +12,26 @@ window.onload = function () {
 
 const card = {
   suits: ["diamonds", "clubs", "hearts", "clovers"],
-  cardValues: ["A", 2, ...12, "J", "Q", "K"]
+  cardValues: [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "J",
+    "Q",
+    "K"
+  ]
 };
 
-
 function pickACard() {
-
   let a = Math.floor(Math.random() * card.suits.length);
   let b = Math.floor(Math.random() * card.cardValues.length);
 
@@ -28,25 +42,22 @@ function pickACard() {
   return selectedCard;
 }
 
-
 function createCard(cardObject) {
   let suitString = "";
-  let valueString = String(cardObject.value);
-
+  let valueString = cardObject.value;
 
   switch (cardObject.suit) {
-
     case "diamonds":
-      suitString = '♦';
+      suitString = "♦";
       break;
     case "hearts":
-      suitString = '♥';
+      suitString = "♥";
       break;
     case "clovers":
-      suitString = '♣';
+      suitString = "♣";
       break;
     case "clubs":
-      suitString = '♠';
+      suitString = "♠";
       break;
   }
 
