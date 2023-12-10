@@ -4,26 +4,35 @@ body {
   background-color: green;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  text-align: center;
+}
+
 #card {
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid white;
   background: white;
-  width: 180px;
-  height: 300px;
-  padding: 10px;
-  display: inline-block;
-  margin: auto;
-  flex-direction: column;
+  width: 250px;
+  height: 400px;
+  padding-top: 100px;
+  margin-bottom: 20px;
   text-align: center;
+  position: relative;
 }
 
 .suit,
 .rotated {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .value {
-  font-size: 6rem;
+  font-size: 7rem;
 }
 
 .suit {

@@ -1,7 +1,7 @@
 import "bootstrap";
 import "./style.css";
 
-window.onload = function () {
+window.onload = function() {
   createCard(pickACard());
   document.querySelector("#button").addEventListener("click", () => {
     createCard(pickACard());
@@ -64,7 +64,7 @@ function createCard(cardObject) {
   document.querySelector(".suit").innerText = suitString;
   document.querySelector(".rotated").innerText = suitString;
 
-  if (cardObject.suit === "clubs" || cardObject.suit === "spades") {
+  if (cardObject.suit === "clubs" || cardObject.suit === "clovers") {
     document.querySelector(".suit").classList.add("black");
     document.querySelector(".rotated").classList.add("black");
   } else {
