@@ -31,7 +31,7 @@ function pickACard() {
 
 function createCard(cardObject) {
   let suitString = ""
-  let valueString = cardObject.value;
+  let valueString = String(cardObject.value);
 
 
   switch (cardObject.suit) {
