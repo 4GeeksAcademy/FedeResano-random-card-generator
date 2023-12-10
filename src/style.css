@@ -1,14 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
- 
+
 body {
     background-color: green;
 }
 
 #card {
     border-radius: 25px;
-    border: white;
+    border: 1px solid white;
     background: white;
     width: 400px;
     height: 800px;
     padding: 10%;
+}
+
+#card .rotated {
+    transform: rotate(180deg);
+}
+
+.suit,
+.value {
+    font-size: 2em;
 }

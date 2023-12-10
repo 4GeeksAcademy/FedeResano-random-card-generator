@@ -18,40 +18,38 @@ const card = {
 
 function pickACard() {
 
-  let a = Math.floor(Math.random() * card.suits.length + 1);
-  let b = Math.floor(Math.random() * card.cardValues.length + 1);
+  let a = Math.floor(Math.random() * card.suits.length);
+  let b = Math.floor(Math.random() * card.cardValues.length);
 
-  let selectedCard = card[suits[a]][cardValues[b]];
-
+  let selectedCard = {
+    suit: card.suits[a],
+    value: card.cardValues[b]
+  }
   return selectedCard;
 }
 
 
 function createCard(cardObject) {
-  let suitStringLeft = "";
-  let suitStringRight = "";
-  let valueString = cardObject[cardValues];
+  let suitString = ""
+  let valueString = cardObject.value;
 
 
-  switch (cardObject[suits]) {
+  switch (cardObject.suit) {
 
     case "diamonds":
-      suitStringLeft = '<i class="fa-solid fa-diamond fa-align-left" style="color: #ff0000;"></i>';
-      suitStringRight = '<i class="fa-solid fa-diamond fa-align-right fa-rotate-90" style="color: #ff0000;"></i>';
+      suitString = '♦';
       break;
     case "hearts":
-      suitStringLeft = '';
-      suitStringRight = '';
+      suitString = '♥';
       break;
     case "clovers":
-      suitStringLeft = '';
-      suitStringRight = '';
+      suitString = '♣';
       break;
     case "clubs":
-      suitStringLeft = '';
-      suitStringRight = '';
+      suitString = '♠';
       break;
   }
 
-  return suitStringLeft + " " + valueString + " " + suitStringRight;
+  document.querySelector(".suit").innerText = suitString;
+  document.querySelector(".value").innerText = valueString;
 }
