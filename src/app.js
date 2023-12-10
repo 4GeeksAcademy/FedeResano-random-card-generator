@@ -1,7 +1,7 @@
 import "bootstrap";
 import "./style.css";
 
-window.onload = function() {
+window.onload = function () {
   createCard(pickACard());
   document.querySelector("#button").addEventListener("click", () => {
     createCard(pickACard());

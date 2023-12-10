@@ -5,13 +5,14 @@ body {
 }
 
 #card {
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid white;
   background: white;
   width: 180px;
   height: 300px;
   padding: 10px;
-  display: flex;
+  display: inline-block;
+  margin: auto;
   flex-direction: column;
 }
 
@@ -26,18 +27,30 @@ body {
 
 .suit {
   color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .suit.black {
   color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .rotated {
   transform: rotate(180deg);
   color: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .rotated.black {
   transform: rotate(180deg);
   color: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
