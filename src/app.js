@@ -24,13 +24,13 @@ function pickACard() {
   let selectedCard = {
     suit: card.suits[a],
     value: card.cardValues[b]
-  }
+  };
   return selectedCard;
 }
 
 
 function createCard(cardObject) {
-  let suitString = ""
+  let suitString = "";
   let valueString = String(cardObject.value);
 
 
