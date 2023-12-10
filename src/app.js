@@ -30,7 +30,7 @@ function pickACard() {
 
 
 function createCard(cardObject) {
-  let suitString = ""
+  let suitString = "";
   let valueString = String(cardObject.value);
 
 
