@@ -24,3 +24,11 @@ body {
 .value {
     font-size: 2em;
 }
+
+.suit {
+    color: red;
+}
+
+.suit.black {
+    color: black;
+}
