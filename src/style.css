@@ -29,6 +29,7 @@ body {
 .suit,
 .rotated {
   font-size: 5rem;
+  line-height: 0.8em;
 }
 
 .value {
