@@ -61,8 +61,8 @@ function createCard(cardObject) {
       break;
   }
 
-  document.querySelector(".suit").innerText = suitString;
-  document.querySelector(".rotated").innerText = suitString;
+  document.querySelector(".suit").innerHTML = suitString;
+  document.querySelector(".rotated").innerHTML = suitString;
 
   if (cardObject.suit === "clubs" || cardObject.suit === "clovers") {
     document.querySelector(".suit").classList.add("black");
@@ -72,5 +72,5 @@ function createCard(cardObject) {
     document.querySelector(".rotated").classList.remove("black");
   }
 
-  document.querySelector(".value").innerText = valueString;
+  document.querySelector(".value").innerHTML = valueString;
 }
